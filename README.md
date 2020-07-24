@@ -4,7 +4,7 @@ This Docker-Container (based on functions from https://code-bude.net/2017/02/12/
 
 ## instructions
 
-First of all yo need your Audible authentication-code! Check the site below for getting it! After few unsuccessful tests I've decide to build a container only for the encoding purposes.
+First of all you need your Audible authentication-code! Check the site below for getting it! After few unsuccessful tests I've decide to build a container only for the encoding purposes.
 
 You're only able to encode your own Audible files, matching to your authentication code!
 
@@ -12,7 +12,7 @@ You're only able to encode your own Audible files, matching to your authenticati
 
 * Log in to audible on a webbroser, go to your library and download the needed files (all in the same folder).
 
-* Now simply run the docker container: `docker run -it -v <your folder with aax files>:/data frozeneyemr/aax2mp3:latest`
+* Now simply run the docker container: `docker run -it -v <your folder with downloaded aax files>:/data frozeneyemr/aax2mp3:latest`
 
 * This will pull the image and start the bash in it, there you need to put in following: `find /data/*.aax -exec /aax2mp3tools/AAXtoMP3 --authcode <your authcode> --single {} \;`
 
